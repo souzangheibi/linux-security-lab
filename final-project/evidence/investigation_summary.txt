@@ -1,0 +1,16 @@
+=== INCIDENT INVESTIGATION SUMMARY ===
+Incident: Unexpected local account creation
+Account: incident_user
+UID: 1002
+Creation time: 2026-09-06 09:41:45
+Password status: Locked
+Privileged groups: None
+Login evidence: None found
+Active processes: None found
+Suspicious home files: None found
+SSH persistence: None found
+User cron: None found
+System cron: No suspicious entry found
+Systemd timers: No suspicious timer found
+Running systemd services: No suspicious service identified
+Assessment: Unauthorized account creation confirmed; no evidence of successful login, privilege escalation, execution, or persistence identified.

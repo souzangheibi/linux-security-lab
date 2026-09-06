@@ -1,0 +1,104 @@
+=== ACCOUNT BASELINE ===
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+dhcpcd
+messagebus
+syslog
+systemd-resolve
+_chrony
+landscape
+polkitd
+analyst
+labuser
+sshd
+Baseline captured at:
+2026-09-06 09:32:35 +0330
+=== PROCESS BASELINE ===
+UID          PID    PPID  C STIME TTY          TIME CMD
+analyst       403     402  0 09:08 pts/0    00:00:00 -bash
+analyst       533       1  0 09:08 ?        00:00:00 /usr/lib/systemd/systemd --user
+analyst       535     533  0 09:08 ?        00:00:00 (sd-pam)
+analyst       600     406  0 09:08 pts/1    00:00:00 -bash
+analyst      1432     403  0 09:32 pts/0    00:00:00 ps -u analyst -u labuser -f
+=== LOGIN BASELINE ===
+analyst   pts/2        127.0.0.1        Fri Sep  4 19:26 - still logged in
+analyst   pts/2        127.0.0.1        Fri Sep  4 19:15 - still logged in
+labuser  pts/2        127.0.0.1        Wed Sep  2 14:25 - still logged in
+labuser  pts/2        127.0.0.1        Wed Sep  2 14:11 - still logged in
+labuser  pts/2        127.0.0.1        Wed Sep  2 13:58 - still logged in
+
+wtmpdb begins Wed Sep  2 13:58:59 2026
+=== FILE & PERMISSION BASELINE ===
+  File: /etc/passwd
+  size: 1478      	Blocks: 8          IO Block: 4096   regular file
+Device: 8,48	Inode: 44911       Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-09-06 09:08:28.841041000 +0330
+Modify: 2026-09-02 13:53:01.342246551 +0330
+Change: 2026-09-02 13:53:01.556573954 +0330
+ Birth: 2026-09-02 13:53:01.336573951 +0330
+  File: /etc/shadow
+  size: 899       	Blocks: 8          IO Block: 4096   regular file
+Device: 8,48	Inode: 44928       Links: 1
+Access: (0640/-rw-r-----)  Uid: (    0/    root)   Gid: (   42/  shadow)
+Access: 2026-09-06 09:08:43.117020160 +0330
+Modify: 2026-09-02 14:52:27.107314049 +0330
+Change: 2026-09-02 14:52:27.188577348 +0330
+ Birth: 2026-09-02 14:52:27.100577349 +0330
+=== SSH FILE BASELINE ===
+total 28
+drwx------ 2 analyst analyst 4096 Sep  4 19:14 .
+drwxr-x--- 8 analyst analyst 4096 Sep  5 13:49 ..
+-rw------- 1 analyst analyst  104 Sep  4 19:14 authorized_keys
+-rw------- 1 analyst analyst  419 Sep  4 19:13 id_ed25519
+-rw-r--r-- 1 analyst analyst  104 Sep  4 19:13 id_ed25519.pub
+-rw------- 1 analyst analyst  978 Sep  2 13:58 known_hosts
+-rw-r--r-- 1 analyst analyst  142 Sep  2 13:56 known_hosts.old
+=== NETWORK BASELINE ===
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*          
+udp   UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*          
+udp   UNCONN 0      0          127.0.0.1:323       0.0.0.0:*          
+udp   UNCONN 0      0          127.0.0.1:323       0.0.0.0:*          
+udp   UNCONN 0      0              [::1]:323          [::]:*          
+udp   UNCONN 0      0              [::1]:323          [::]:*          
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          
+tcp   LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*          
+tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          
+tcp   LISTEN 0      4096            [::]:22           [::]:*          
+=== SYSTEM BASELINE ===
+Linux SOC-LAB 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 26.04 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04 (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+Hostname:
+SOC-LAB
+Captured at:
+2026-09-06 09:37:45 +0330

@@ -1,0 +1,102 @@
+LAB 02 - ACCESS, PRIVILEGE & SSH
+=================================
+
+Environment
+-----------
+OS: Ubuntu 26.04 LTS
+Environment: WSL2
+User: souzan
+Test User: labuser
+
+
+1. SETUP TEST
+-------------
+
+Script:
+./setup_lab02.sh
+
+Result:
+PASS
+
+Verified:
+- labuser exists
+- /home/labuser exists
+- secret.txt exists
+- secret.txt permissions set to 600
+
+
+2. FILE PERMISSION TEST
+-----------------------
+
+Script:
+./permission_test.sh
+
+Result:
+PASS
+
+Verified:
+- secret.txt permissions: 600
+- Owner (souzan) can read the file
+- labuser cannot read the file
+
+
+3. SSH SECURITY TEST
+--------------------
+
+Script:
+./ssh_test.sh
+
+Result:
+PASS
+
+Verified:
+- SSH service is active
+- SSH listening on TCP port 22
+- PermitRootLogin: prohibit-password
+- PasswordAuthentication: yes
+- SSH configuration syntax is valid
+
+
+4. SSH AUTHENTICATION TEST
+--------------------------
+
+Command:
+ssh labuser@localhost
+
+Result:
+PASS
+
+Verified:
+- labuser successfully authenticated through SSH
+- SSH session opened successfully
+- User identity inside session: labuser
+- Home directory: /home/labuser
+
+
+5. SSH LOG REVIEW
+-----------------
+
+Command:
+sudo journalctl -u ssh --since "30 minutes ago"
+
+Observed:
+- Successful authentication for labuser
+- Failed authentication attempts were recorded
+- SSH session opened after successful authentication
+
+
+SECURITY FINDINGS
+-----------------
+
+1. secret.txt is protected with permission 600.
+2. labuser cannot access the protected secret file.
+3. Direct root password login is restricted.
+4. SSH password authentication is enabled.
+5. SSH authentication events are recorded in the system journal.
+
+
+FINAL STATUS
+------------
+
+Lab 02 practical tests: PASS
+Documentation status: COMPLETE

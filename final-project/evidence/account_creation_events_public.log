@@ -1,0 +1,3 @@
+Sep 06 09:41:45 SOC-LAB useradd[1671]: new group: name=incident_user, GID=1002
+Sep 06 09:41:45 SOC-LAB useradd[1671]: new user: name=incident_user, UID=1002, GID=1002, home=/home/incident_user, shell=/bin/bash, from=/dev/pts/2
+Sep 06 09:42:06 SOC-LAB useradd[1688]: failed adding user 'incident_user', exit code: 9

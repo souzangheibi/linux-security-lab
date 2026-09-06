@@ -1,0 +1,12 @@
+Sep 06 09:41:45 SOC-LAB sudo[1665]: analyst : TTY=/dev/pts/0 ; PWD=/home/analyst/linux-security-lab/final-project ; USER=root ; COMMAND=/usr/sbin/useradd -m -s /bin/bash incident_user
+Sep 06 09:41:45 SOC-LAB useradd[1671]: new group: name=incident_user, GID=1002
+Sep 06 09:41:45 SOC-LAB useradd[1671]: new user: name=incident_user, UID=1002, GID=1002, home=/home/incident_user, shell=/bin/bash, from=/dev/pts/2
+Sep 06 09:42:06 SOC-LAB sudo[1685]: analyst : TTY=/dev/pts/0 ; PWD=/home/analyst/linux-security-lab/final-project ; USER=root ; COMMAND=/usr/sbin/useradd -m -s /bin/bash incident_user
+Sep 06 09:42:06 SOC-LAB useradd[1688]: failed adding user 'incident_user', exit code: 9
+Sep 06 12:32:18 SOC-LAB sudo[651]: analyst : TTY=/dev/pts/0 ; PWD=/home/analyst/linux-security-lab/final-project ; USER=root ; COMMAND=/usr/bin/passwd -S incident_user
+Sep 06 12:32:40 SOC-LAB sudo[664]: analyst : TTY=/dev/pts/0 ; PWD=/home/analyst/linux-security-lab/final-project ; USER=root ; COMMAND=/usr/bin/getent shadow incident_user
+Sep 06 12:34:12 SOC-LAB sudo[727]: analyst : TTY=/dev/pts/0 ; PWD=/home/analyst/linux-security-lab/final-project ; USER=root ; COMMAND=/usr/bin/ls -la /home/incident_user
+Sep 06 12:35:17 SOC-LAB sudo[762]: analyst : TTY=/dev/pts/0 ; PWD=/home/analyst/linux-security-lab/final-project ; USER=root ; COMMAND=/usr/bin/find /home/incident_user -maxdepth 2 -type f -ls
+Sep 06 12:35:40 SOC-LAB sudo[811]: analyst : TTY=/dev/pts/0 ; PWD=/home/analyst/linux-security-lab/final-project ; USER=root ; COMMAND=/usr/bin/ls -la /home/incident_user/.ssh
+Sep 06 12:36:11 SOC-LAB sudo[834]: analyst : TTY=/dev/pts/0 ; PWD=/home/analyst/linux-security-lab/final-project ; USER=root ; COMMAND=/usr/bin/crontab -u incident_user -l
+Sep 06 12:36:11 SOC-LAB crontab[837]: (root) LIST (incident_user)

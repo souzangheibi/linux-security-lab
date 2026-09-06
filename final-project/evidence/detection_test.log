@@ -1,0 +1,6 @@
+=== DETECTION TEST ===
+Test: Controlled creation of incident_user
+Detection tool: scripts/account_detection.sh
+Expected result: New account detected
+Actual result: [ALERT] New account(s) detected: incident_user
+Status: PASS
